@@ -666,6 +666,13 @@ dex_import {
 }
 
 dex_import {
+	name: "comet-services",
+	owner: "google",
+	jars: ["proprietary/system_ext/framework/comet-services.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "google-ril",
 	owner: "google",
 	jars: ["proprietary/system_ext/framework/google-ril.jar"],

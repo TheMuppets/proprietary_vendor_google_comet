@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
     com.google.android.camera.experimental2024_system \
     com.google.android.camera.extensions \
     com.google.android.camerax.extensions \
+    comet-services \
     google-ril \
     oemrilhook \
     vendor.google.edgetpu_app_service@1.0-service.xml \
