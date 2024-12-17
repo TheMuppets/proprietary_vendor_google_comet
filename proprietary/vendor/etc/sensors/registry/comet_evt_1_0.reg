@@ -200,6 +200,18 @@ reg_script=comet_evt_1_0.reg
   itime_table=1600000 1600000 300000 300000 300000 1600000
   max_gain_table=11 10 10 10 10 10
 
+# RAINBOW (VD6282)
++/dev/vd6282/0/spectral
+  # Golden values for calibration.
+  golden_rals_r=1163.646585
+  golden_rals_g=1297.843559
+  golden_rals_b=322.306958
+  golden_rals_clr1=5753.366469
+  golden_rals_ir=2875.120369
+  golden_rals_clr2=5825.006990
++/dev/vd6282/0/rls
+  lux_scale=94.995733
+
 # Hall Effect (DRV5032)
 +/dev/drv5032/1
   gpio_id=gpio89

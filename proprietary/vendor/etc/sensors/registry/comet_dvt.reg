@@ -303,6 +303,18 @@ reg_script=comet_dvt.reg
 +/dev/tmd3733/0/panel-b/prox
   pdata_scale=1.89322
 
+# RAINBOW (VD6282)
++/dev/vd6282/0/spectral
+  # Golden values for calibration.
+  golden_rals_r=1102.385143
+  golden_rals_g=1254.360824
+  golden_rals_b=316.562872
+  golden_rals_clr1=5480.027478
+  golden_rals_ir=3063.690762
+  golden_rals_clr2=5621.005320
++/dev/vd6282/0/rls
+  lux_scale=97.505086
+
 # Hall Effect (DRV5032)
 +/dev/drv5032/1
   gpio_id=gpio89

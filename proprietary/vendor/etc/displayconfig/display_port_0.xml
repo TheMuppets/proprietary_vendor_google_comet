@@ -226,4 +226,12 @@
     </luxThrottling>
 
     <supportsVrr>true</supportsVrr>
+
+    <dozeBrightnessSensorValueToBrightness>
+        <item>-1</item> <!-- 0: OFF -->
+        <item>0.0</item> <!-- 1: NIGHT, 2 nits  -->
+        <item>0.0050501002</item> <!-- 2: LOW, 10 nits (10-2)/(1000-2)*(0.63-0)+0 -->
+        <item>0.0303006012</item> <!-- 3: HIGH, 50 nits (50-2)/(1000-2)*(0.63+0)+0 -->
+        <item>0.0303006012</item> <!-- 4: SUN, 50 nits (50-2)/(1000-2)*(0.63-0)+0 -->
+    </dozeBrightnessSensorValueToBrightness>
 </displayConfiguration>

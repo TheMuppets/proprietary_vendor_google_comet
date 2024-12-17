@@ -376,6 +376,7 @@
 
 +/dev/tmd3733/0/panel-b/als
   # Display leakage golden cal value.
+  leakage_per_device_cal_enable=1
   leakage_at_dbv=50.15762 3628 7.74500 637
   # Prox delay itime table in microsecond.
   # Display HS mode.
@@ -413,8 +414,8 @@
   histo_luma_eq0=0 0 0 0e0
   histo_luma_eq1=1 4096 0 6.06737066e-02 1.17612775e-02 -4.95300514e-05 6.87088684e-08
   histo_dbv_eq0=0 0 0 0e0
-  histo_dbv_eq1=1 1180 0 2.89835210e+00 2.03043520e-02 -2.19844472e-05 9.30293568e-09
-  histo_dbv_eq2=1181 3628 0 -1.43265311e+03 4.31340785e+00 -5.25728563e-03 3.33354817e-06 -1.15819634e-09 2.09095003e-13 -1.53129472e-17
+  histo_dbv_eq1=1 1180 0 3.40982600e-01 2.38874729e-03 -2.58640555e-06 1.09446302e-09
+  histo_dbv_eq2=1181 3628 0 -2.68287099e+01 8.07754278e-02 -9.84510417e-05 6.24259957e-08 -2.16890701e-11 3.91563676e-15 -2.86759311e-19
   histo_dbv_eq3=3629 4096 0 50
 
   # The maximum brightness (DBV) value up to which histogram is active.
@@ -465,13 +466,6 @@
   pcm_rate_hz=16000
 +/dev/vd6282/0/spectral
   auto_gain=1
-  # Golden values for calibration.
-  golden_rals_r=1163.646585
-  golden_rals_g=1297.843559
-  golden_rals_b=322.306958
-  golden_rals_clr1=5753.366469
-  golden_rals_ir=2875.120369
-  golden_rals_clr2=5825.006990
   # On-change thresholds for each color channel c: min_delta[c] ratio[c].
   # A value of -1 disables a threshold.
   # Change events are determined as follows:
@@ -488,7 +482,6 @@
   c2_change_thresh=-1 -1
   ir_change_thresh=-1 -1
 +/dev/vd6282/0/rls
-  lux_scale=94.995733
   fix_fac_cal=1
 +/dev/vd6282/0/flicker
   auto_gain=1
@@ -519,6 +512,7 @@
   gpio_id=gpio39
   intr_id=16
   priority=0
+  name=DRV5032 Hall Effect Sensor 0
 +/dev/drv5032/1
   priority=1
   name=DRV5032 Hall Effect Sensor 1
@@ -584,10 +578,10 @@
   intr_type=1
   panel_height_pixel=2424
   panel_height_mm=146
-  single_tap_min_x=91
-  single_tap_max_x=989
-  single_tap_min_y=179
-  single_tap_max_y=2245
+  single_tap_min_x=910
+  single_tap_max_x=9890
+  single_tap_min_y=1790
+  single_tap_max_y=22450
   single_tap_min_frame_count=3
   single_tap_max_frame_count=31
   single_press_motion_tolerance=255
@@ -615,6 +609,7 @@
   single_tap_max_frame_count=31
   single_press_motion_tolerance=255
   single_press_max_touch_size=50
+  super_resolution_auto_scale=1
   priority=1
   hidden=0
   name=Inner Touch Gesture Sensor
@@ -631,6 +626,9 @@
   virtual_alsp=1
   single_tap_enable=1
 
+# Magnetic accessory detector.
++/vsc/magaccessory_detector
+
 # Auto brightness.
 +/vsc/auto_brightness
   dual_als=1
@@ -645,6 +643,17 @@
   als_startup_filter=0 0 0
   # float[3]={zeroPoint, onePoint, endPoint}, set to 0 to disable
   rear_lux_downscaling=0 0 0
+  # Select fusion algorithm.
+  # 0: Classic (old, using lower-lux scaling).
+  # 1: Simple (new, avoids issues of classic)
+  fusion_algo_select=1
+  # Configuration of simple fusion algorithm.
+  # float[3]={N, D, B}
+  #   [N]exit-night: sets the lux threshold below which is considered night.
+  #   [D]enter-day: sets the lux threshold above which is considered day.
+  #     i.e., lux <= N is night, N < lux < D is transition, lux >= D is day.
+  #   [B]very-low-light-boost: Additional boost factor, needs to be > 1.
+  simple_fusion_algo_config=20 40 1.25
 
 # Binned brightness.
 +/vsc/binned_brightness
