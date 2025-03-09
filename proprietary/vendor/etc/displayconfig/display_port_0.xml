@@ -195,15 +195,6 @@
                 </refreshRateRange>
             </refreshRateZoneProfile>
         </refreshRateZoneProfiles>
-        <lowerBlockingZoneConfigs>
-            <defaultRefreshRate>120</defaultRefreshRate>
-            <blockingZoneThreshold>
-                <displayBrightnessPoint>
-                    <lux>-1</lux>
-                    <nits>30</nits>
-                </displayBrightnessPoint>
-            </blockingZoneThreshold>
-       </lowerBlockingZoneConfigs>
        <defaultRefreshRateInHbmHdr>60</defaultRefreshRateInHbmHdr>
     </refreshRate>
 
