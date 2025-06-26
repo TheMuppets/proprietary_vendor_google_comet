@@ -551,7 +551,9 @@
   prox_threshold23=25
 
   # Hall sensor ID used for phone case detection of on sx932x.
+  # TODO(b/400327608) remove hall_sensor_id after P24 AoC been updated.
   hall_sensor_id=1
+  case_hall_sensor_id=1
   # AdvCtrl16(0x50), [3:2], STEADYWINDOW   #(HEX)0x00 = (Binary)0    => 4 samples.
   steady_window=0
   # AdvCtrl17(0x51), [7:4], STEADYMAXVAR01 #(HEX)0x08 = (Binary)1000 => 128.
@@ -659,11 +661,9 @@
 +/vsc/binned_brightness
   dual_als=1
 
-# Device Pickup.
-+/vsc/device_pickup
-  landscape_config=1 0
-  landscape_modes=0 1 1 1 1
-  dual_accel=1
+# Lift To Wake
++/vsc/lift_to_wake
+  enable_landscape_mode=1
 
 +/vsc/fusion_prox_voice_call
   # 0: Normal (fusion of Optical Prox with other sensors)
