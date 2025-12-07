@@ -492,6 +492,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model \
     vendor/google/comet/proprietary/product/etc/firmware/music_detector.sound_model_2:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_2 \
     vendor/google/comet/proprietary/product/etc/firmware/music_detector.sound_model_tflite:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_tflite \
+    vendor/google/comet/proprietary/product/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
     vendor/google/comet/proprietary/product/etc/permissions/androidx.camera.extensions.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/androidx.camera.extensions.impl.xml \
     vendor/google/comet/proprietary/product/etc/permissions/com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.omadm.service.xml \
     vendor/google/comet/proprietary/product/etc/permissions/com.android.sdm.plugins.connmo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.connmo.xml \
@@ -529,6 +530,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/product/etc/sysconfig/pixel_experience_2024_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2024_midyear.xml \
     vendor/google/comet/proprietary/product/etc/sysconfig/satellite_sos.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/satellite_sos.xml \
     vendor/google/comet/proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-euiccpixel.xml \
+    vendor/google/comet/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google/comet/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google/comet/proprietary/system_ext/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc \
     vendor/google/comet/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
@@ -623,6 +625,7 @@ PRODUCT_PACKAGES += \
     oemrilhook \
     com.google.pixel.camera.services@1.0-service-google.xml \
     vendor.google.edgetpu_app_service@1.0-service.xml \
+    gs_watchdogd \
     vendor.google.edgetpu_app_service@1.0-service \
     vendor.google.whitechapel.audio.hal.parserservice
 
@@ -633,10 +636,46 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/Khronos/OpenCL/vendors/ARM.icd:$(TARGET_COPY_OUT_VENDOR)/etc/Khronos/OpenCL/vendors/ARM.icd \
+    vendor/google/comet/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json \
+    vendor/google/comet/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json \
+    vendor/google/comet/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
+    vendor/google/comet/proprietary/vendor/etc/aoc/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
+    vendor/google/comet/proprietary/vendor/etc/aoc/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
+    vendor/google/comet/proprietary/vendor/etc/aoc/HEADSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HEADSET.dat \
+    vendor/google/comet/proprietary/vendor/etc/aoc/downlink_bluetooth_headset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_bluetooth_headset_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/downlink_dock_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_dock_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/downlink_external_speaker_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_external_speaker_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/downlink_handset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_handset_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/downlink_speaker_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_speaker_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/downlink_wired_headset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_wired_headset_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/mcps.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/mcps.dat \
+    vendor/google/comet/proprietary/vendor/etc/aoc/recording.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/recording.gatf \
+    vendor/google/comet/proprietary/vendor/etc/aoc/smartfeature.gstf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/smartfeature.gstf \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_bluetooth_headset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_bluetooth_headset_aec_off_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_bluetooth_headset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_bluetooth_headset_aec_on_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_dock_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_dock_aec_off_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_dock_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_dock_aec_on_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_external_speaker_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_external_speaker_aec_off_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_external_speaker_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_external_speaker_aec_on_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_handset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_handset_aec_off_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_handset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_handset_aec_on_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_speaker_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_speaker_aec_off_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_speaker_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_speaker_aec_on_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_wired_headset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_wired_headset_aec_off_config.pb \
+    vendor/google/comet/proprietary/vendor/etc/aoc/uplink_wired_headset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_wired_headset_aec_on_config.pb \
     vendor/google/comet/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
+    vendor/google/comet/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
+    vendor/google/comet/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     vendor/google/comet/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
+    vendor/google/comet/proprietary/vendor/etc/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf \
     vendor/google/comet/proprietary/vendor/etc/bluetooth/firmware_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/firmware_config.json \
     vendor/google/comet/proprietary/vendor/etc/bluetooth/hal_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/hal_config.json \
+    vendor/google/comet/proprietary/vendor/etc/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    vendor/google/comet/proprietary/vendor/etc/bluetooth_power_limits_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
+    vendor/google/comet/proprietary/vendor/etc/bluetooth_power_limits_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+    vendor/google/comet/proprietary/vendor/etc/bluetooth_power_limits_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
+    vendor/google/comet/proprietary/vendor/etc/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
+    vendor/google/comet/proprietary/vendor/etc/bm_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json \
     vendor/google/comet/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
     vendor/google/comet/proprietary/vendor/etc/chre/activity.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.so \
     vendor/google/comet/proprietary/vendor/etc/chre/aidb_recorder.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/aidb_recorder.napp_header \
@@ -688,6 +727,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/chre/vice.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/vice.so \
     vendor/google/comet/proprietary/vendor/etc/chre/wallaby.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/wallaby.napp_header \
     vendor/google/comet/proprietary/vendor/etc/chre/wallaby.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/wallaby.so \
+    vendor/google/comet/proprietary/vendor/etc/compens_spk_l_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/compens_spk_l_1.conf \
+    vendor/google/comet/proprietary/vendor/etc/compens_spk_l_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/compens_spk_l_2.conf \
+    vendor/google/comet/proprietary/vendor/etc/compens_spk_r_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/compens_spk_r_1.conf \
+    vendor/google/comet/proprietary/vendor/etc/compens_spk_r_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/compens_spk_r_2.conf \
     vendor/google/comet/proprietary/vendor/etc/database/DbEcc_202.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_202.xml \
     vendor/google/comet/proprietary/vendor/etc/database/DbEcc_204.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_204.xml \
     vendor/google/comet/proprietary/vendor/etc/database/DbEcc_206.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_206.xml \
@@ -772,19 +815,26 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/displayconfig/display_port_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_port_0.xml \
     vendor/google/comet/proprietary/vendor/etc/displayconfig/display_port_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_port_1.xml \
     vendor/google/comet/proprietary/vendor/etc/earcheek_classifier.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/earcheek_classifier.tflite \
+    vendor/google/comet/proprietary/vendor/etc/fstab.efs:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.efs \
+    vendor/google/comet/proprietary/vendor/etc/fstab.modem:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.modem \
+    vendor/google/comet/proprietary/vendor/etc/fstab.persist:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.persist \
     vendor/google/comet/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
+    vendor/google/comet/proprietary/vendor/etc/gnss/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
+    vendor/google/comet/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google/comet/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.audio.service-aidl.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-aidl.aoc.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/android.hardware.dumpstate-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate-service.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.input.processor-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.input.processor-service.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.qorvo.uwb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.qorvo.uwb-service.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.secure_element-service.uicc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element-service.uicc.rc \
     vendor/google/comet/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
@@ -798,20 +848,41 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/init/com.google.edgetpu.tachyon-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.tachyon-service.rc \
     vendor/google/comet/proprietary/vendor/etc/init/com.google.input.gia.giacore.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.input.gia.giacore.rc \
     vendor/google/comet/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/dump_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dump_power.rc \
     vendor/google/comet/proprietary/vendor/etc/init/fingerprint-fpc42_fw49.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-fpc42_fw49.rc \
     vendor/google/comet/proprietary/vendor/etc/init/google.hardware.media.c2@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@2.0-service.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/hw/init.comet.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.comet.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/hw/init.persist.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.persist.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/hw/init.zumapro.board.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zumapro.board.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/hw/init.zumapro.soc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zumapro.soc.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/hw/init.zumapro.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zumapro.usb.rc \
     vendor/google/comet/proprietary/vendor/etc/init/hwc3-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-pixel.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.aoc.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.display_logbuffer.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.display_logbuffer.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.fingerprint.dump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.dump.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.gnss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gnss.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.liboemservice_proxy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.liboemservice_proxy.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.modem_logging_control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.modem_logging_control.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.module.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.module.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.pixel-mm-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-mm-gs.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.pixel-perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-perf.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.power-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.power-gs.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.shared_modem_platform_l.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.shared_modem_platform_l.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.sscoredump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sscoredump.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.touch.gti0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.gti0.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.touch.gti1.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.gti1.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/init.touch.predump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.predump.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init.vendor_telephony.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor_telephony.rc \
     vendor/google/comet/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/libg3a_gabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gabc.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google/comet/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/google/comet/proprietary/vendor/etc/init/pcie_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pcie_power.rc \
+    vendor/google/comet/proprietary/vendor/etc/init/pixel-experiments-recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-experiments-recovery.rc \
     vendor/google/comet/proprietary/vendor/etc/init/pixel-gnss-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-gnss-default.rc \
     vendor/google/comet/proprietary/vendor/etc/init/pixelstats-vendor.zumapro.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.zumapro.rc \
     vendor/google/comet/proprietary/vendor/etc/init/pktrouter.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pktrouter.rc \
@@ -834,12 +905,41 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/input-port-associations.xml:$(TARGET_COPY_OUT_VENDOR)/etc/input-port-associations.xml \
     vendor/google/comet/proprietary/vendor/etc/input_classifier_model.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model.pb \
     vendor/google/comet/proprietary/vendor/etc/input_classifier_model_ext.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model_ext.pb \
+    vendor/google/comet/proprietary/vendor/etc/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml \
+    vendor/google/comet/proprietary/vendor/etc/libg3a_standalone_gabc_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gabc_rc \
+    vendor/google/comet/proprietary/vendor/etc/libg3a_standalone_gaf_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gaf_rc \
+    vendor/google/comet/proprietary/vendor/etc/libg3a_standalone_ghawb_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_ghawb_rc \
+    vendor/google/comet/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    vendor/google/comet/proprietary/vendor/etc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
+    vendor/google/comet/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/google/comet/proprietary/vendor/etc/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml \
+    vendor/google/comet/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/google/comet/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
+    vendor/google/comet/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/google/comet/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     vendor/google/comet/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/google/comet/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    vendor/google/comet/proprietary/vendor/etc/modem/Pixel_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.cfg \
+    vendor/google/comet/proprietary/vendor/etc/modem/Pixel_stability.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.nprf \
+    vendor/google/comet/proprietary/vendor/etc/modem/camera_front_inner_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_inner_mipi_coex_table.csv \
+    vendor/google/comet/proprietary/vendor/etc/modem/camera_front_outer_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_outer_mipi_coex_table.csv \
+    vendor/google/comet/proprietary/vendor/etc/modem/camera_rear_tele_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_tele_mipi_coex_table.csv \
+    vendor/google/comet/proprietary/vendor/etc/modem/camera_rear_wide_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_wide_mipi_coex_table.csv \
+    vendor/google/comet/proprietary/vendor/etc/modem/default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.cfg \
+    vendor/google/comet/proprietary/vendor/etc/modem/default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.nprf \
+    vendor/google/comet/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
+    vendor/google/comet/proprietary/vendor/etc/modem/display_secondary_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_secondary_mipi_coex_table.csv \
+    vendor/google/comet/proprietary/vendor/etc/modem/extensive_logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/extensive_logging.conf \
+    vendor/google/comet/proprietary/vendor/etc/modem/logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/logging.conf \
+    vendor/google/comet/proprietary/vendor/etc/modem_ml_models.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_ml_models.conf \
+    vendor/google/comet/proprietary/vendor/etc/modem_ml_tflite_models.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_ml_tflite_models.conf \
     vendor/google/comet/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
     vendor/google/comet/proprietary/vendor/etc/open_carrier_info.dat:$(TARGET_COPY_OUT_VENDOR)/etc/open_carrier_info.dat \
+    vendor/google/comet/proprietary/vendor/etc/panel_config_google-ct3a_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3a_cal0.pb \
+    vendor/google/comet/proprietary/vendor/etc/panel_config_google-ct3b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3b_cal0.pb \
+    vendor/google/comet/proprietary/vendor/etc/panel_config_google-ct3c_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3c_cal1.pb \
+    vendor/google/comet/proprietary/vendor/etc/panel_config_google-ct3d_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3d_cal1.pb \
+    vendor/google/comet/proprietary/vendor/etc/panel_config_google-ct3e_cal1.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-ct3e_cal1.pb \
     vendor/google/comet/proprietary/vendor/etc/panel_ctrl_google-ct3b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_ctrl_google-ct3b_cal0.pb \
     vendor/google/comet/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
     vendor/google/comet/proprietary/vendor/etc/permissions/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -847,7 +947,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     vendor/google/comet/proprietary/vendor/etc/permissions/android.hardware.uwb.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.uwb.xml \
     vendor/google/comet/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2024.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2024.xml \
+    vendor/google/comet/proprietary/vendor/etc/permissions/com.google.pixel.camera.concurrent_foldable_dual_front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.pixel.camera.concurrent_foldable_dual_front.xml \
+    vendor/google/comet/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
     vendor/google/comet/proprietary/vendor/etc/pixelstats_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pixelstats_config.json \
+    vendor/google/comet/proprietary/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     vendor/google/comet/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/google/comet/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/google/comet/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
@@ -862,18 +965,51 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/etc/sensors/registry/comet_evt_1_1.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/comet_evt_1_1.reg \
     vendor/google/comet/proprietary/vendor/etc/sensors/registry/comet_proto_1_0.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/comet_proto_1_0.reg \
     vendor/google/comet/proprietary/vendor/etc/sensors/registry/comet_proto_1_1.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/comet_proto_1_1.reg \
+    vendor/google/comet/proprietary/vendor/etc/spatializer/base:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/base \
+    vendor/google/comet/proprietary/vendor/etc/spatializer/mode_2_ch:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/mode_2_ch \
+    vendor/google/comet/proprietary/vendor/etc/spatializer/mode_6_ch:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/mode_6_ch \
+    vendor/google/comet/proprietary/vendor/etc/spatializer/mode_xaural:$(TARGET_COPY_OUT_VENDOR)/etc/spatializer/mode_xaural \
+    vendor/google/comet/proprietary/vendor/etc/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
     vendor/google/comet/proprietary/vendor/etc/tcm_test_cfg_ct3.ini:$(TARGET_COPY_OUT_VENDOR)/etc/tcm_test_cfg_ct3.ini \
     vendor/google/comet/proprietary/vendor/etc/tcm_test_cfg_gt4.ini:$(TARGET_COPY_OUT_VENDOR)/etc/tcm_test_cfg_gt4.ini \
+    vendor/google/comet/proprietary/vendor/etc/telephony/satellite_access_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/telephony/satellite_access_config.json \
+    vendor/google/comet/proprietary/vendor/etc/telephony/sats2.dat:$(TARGET_COPY_OUT_VENDOR)/etc/telephony/sats2.dat \
+    vendor/google/comet/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    vendor/google/comet/proprietary/vendor/etc/thermal_info_config_backup.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_backup.json \
+    vendor/google/comet/proprietary/vendor/etc/thermal_info_config_charge.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
+    vendor/google/comet/proprietary/vendor/etc/thermal_info_config_lpm.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_lpm.json \
     vendor/google/comet/proprietary/vendor/etc/touchflow_inner.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow_inner.pb \
     vendor/google/comet/proprietary/vendor/etc/touchflow_outer.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow_outer.pb \
     vendor/google/comet/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
+    vendor/google/comet/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration-CE.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration-CE.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration-FCC.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration-FCC.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration-JP.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration-JP.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration-RESTRICTED.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration-RESTRICTED.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration-TW.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration-TW.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration-default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration-default.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calibration.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/capabilities.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/capabilities.conf \
+    vendor/google/comet/proprietary/vendor/etc/uwb/configuration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/configuration.conf \
     vendor/google/comet/proprietary/vendor/etc/uwb/manifest.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/manifest.conf \
     vendor/google/comet/proprietary/vendor/etc/uwb/regions.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/regions.conf \
+    vendor/google/comet/proprietary/vendor/etc/vt_estimation_model.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
+    vendor/google/comet/proprietary/vendor/etc/vt_speaker_estimation_model.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_speaker_estimation_model.tflite \
+    vendor/google/comet/proprietary/vendor/etc/waves_config.ini:$(TARGET_COPY_OUT_VENDOR)/etc/waves_config.ini \
+    vendor/google/comet/proprietary/vendor/etc/waves_config_nx.ini:$(TARGET_COPY_OUT_VENDOR)/etc/waves_config_nx.ini \
+    vendor/google/comet/proprietary/vendor/etc/waves_preset.mps:$(TARGET_COPY_OUT_VENDOR)/etc/waves_preset.mps \
+    vendor/google/comet/proprietary/vendor/etc/waves_preset_nx.mps:$(TARGET_COPY_OUT_VENDOR)/etc/waves_preset_nx.mps \
+    vendor/google/comet/proprietary/vendor/etc/wifi/coex_table.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/coex_table.xml \
+    vendor/google/comet/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/google/comet/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/google/comet/proprietary/vendor/firmware/1540a.app:$(TARGET_COPY_OUT_VENDOR)/firmware/1540a.app \
     vendor/google/comet/proprietary/vendor/firmware/KIOXIATHGJFJT1E45BATPC0100.img:$(TARGET_COPY_OUT_VENDOR)/firmware/KIOXIATHGJFJT1E45BATPC0100.img \
     vendor/google/comet/proprietary/vendor/firmware/KIOXIATHGJFJT2T85BAT0C0100.img:$(TARGET_COPY_OUT_VENDOR)/firmware/KIOXIATHGJFJT2T85BAT0C0100.img \
     vendor/google/comet/proprietary/vendor/firmware/MICRONMT128GBCAV2U310103.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GBCAV2U310103.img \
     vendor/google/comet/proprietary/vendor/firmware/MICRONMT128GBCAV2U310104.img:$(TARGET_COPY_OUT_VENDOR)/firmware/MICRONMT128GBCAV2U310104.img \
+    vendor/google/comet/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
+    vendor/google/comet/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-diag.bin \
+    vendor/google/comet/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin \
     vendor/google/comet/proprietary/vendor/firmware/SAMSUNGKLUDG4UHGC-B0E13103.img:$(TARGET_COPY_OUT_VENDOR)/firmware/SAMSUNGKLUDG4UHGC-B0E13103.img \
     vendor/google/comet/proprietary/vendor/firmware/aoc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aoc.bin \
     vendor/google/comet/proprietary/vendor/firmware/batt_fw_adi_79_2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/batt_fw_adi_79_2.bin \
@@ -2123,6 +2259,12 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/firmware/carrierconfig/manifests/fdd9e943e070a03a7aa5505381aa9f2284b65669:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fdd9e943e070a03a7aa5505381aa9f2284b65669 \
     vendor/google/comet/proprietary/vendor/firmware/carrierconfig/manifests/ff964f285bc45e8e1e755b6c94db32092d77382b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ff964f285bc45e8e1e755b6c94db32092d77382b \
     vendor/google/comet/proprietary/vendor/firmware/carrierconfig/release-label:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/release-label \
+    vendor/google/comet/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.bin \
+    vendor/google/comet/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
+    vendor/google/comet/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.bin \
+    vendor/google/comet/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.wmfw \
+    vendor/google/comet/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.bin \
+    vendor/google/comet/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
     vendor/google/comet/proprietary/vendor/firmware/cs40l26-calib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-calib.bin \
     vendor/google/comet/proprietary/vendor/firmware/cs40l26-calib.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-calib.wmfw \
     vendor/google/comet/proprietary/vendor/firmware/cs40l26-dbc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-dbc.bin \
@@ -2133,6 +2275,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/comet/proprietary/vendor/firmware/dauntless/d3m2.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/d3m2.ec.bin \
     vendor/google/comet/proprietary/vendor/firmware/dauntless/evt.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/evt.ec.bin \
     vendor/google/comet/proprietary/vendor/firmware/dauntless/proto11.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/proto11.ec.bin \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch1.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch1.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch2.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch2.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch3.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch3.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch4.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch4.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch5.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch5.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch6.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch6.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch7.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch7.txt \
+    vendor/google/comet/proprietary/vendor/firmware/fast_switch8.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/fast_switch8.txt \
     vendor/google/comet/proprietary/vendor/firmware/filter_ie:$(TARGET_COPY_OUT_VENDOR)/firmware/filter_ie \
     vendor/google/comet/proprietary/vendor/firmware/fw_bcmdhd.bin_4390_a0:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.bin_4390_a0 \
     vendor/google/comet/proprietary/vendor/firmware/fw_bcmdhd.bin_4390_b0:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.bin_4390_b0 \
@@ -3494,6 +3644,8 @@ PRODUCT_PACKAGES += \
     PixelVibratorFlagsL26 \
     android.hardware.authsecret-impl.nos \
     android.hardware.oemlock-impl.nos \
+    android.hardware.power.stats-impl.gs-common \
+    android.hardware.power.stats-impl.zumapro \
     android.hardware.security.keymint-impl.nos \
     android.hardware.weaver-bridge.nos \
     android.hardware.weaver-impl.nos \
@@ -3560,6 +3712,7 @@ PRODUCT_PACKAGES += \
     libdisplaycolor \
     libdisplaypanel \
     libdrmresource \
+    libdump \
     libedgetpu_client.google \
     libedgetpu_litert \
     libedgetpu_tachyon.google \
@@ -3617,6 +3770,12 @@ PRODUCT_PACKAGES += \
     libutils-default \
     libvendorgraphicbuffer \
     libwlcproto_aidl-default \
+    modem_android_property_manager \
+    modem_android_property_manager_impl \
+    modem_clock_manager \
+    modem_clock_manager_impl \
+    modem_log_constants \
+    modem_log_dumper \
     modem_ml_pw_rpc_gen \
     modemml-tflite-service-aidl-V1-ndk \
     sensors.usf \
@@ -3661,6 +3820,7 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret-service.citadel.xml \
     android.hardware.camera.provider@2.7-service-google-apex.xml \
     android.hardware.contexthub-service.generic.xml \
+    android.hardware.dumpstate-service.xml \
     android.hardware.gnss@lassen.xml \
     android.hardware.neuralnetworks@service-darwinn-aidl.xml \
     android.hardware.oemlock-service.citadel.xml \
@@ -3693,8 +3853,29 @@ PRODUCT_PACKAGES += \
     aocxd \
     bipchmgr \
     cbd \
+    copy_efs_files_to_data \
     dmd \
+    dump_aoc \
+    dump_devfreq \
+    dump_display_logbuffer \
+    dump_exynos_display \
+    dump_exynos_second_display \
+    dump_fingerprint \
+    dump_gsc \
+    dump_modemlog \
+    dump_pcie \
+    dump_perf \
+    dump_pixel_metrics \
+    dump_power \
+    dump_sensors \
+    dump_soc \
+    dump_storage \
+    dump_thermal \
+    dump_touch \
     dump_tpu \
+    dump_trusty \
+    predump_gti0 \
+    predump_gti1 \
     qm35_poll \
     gia \
     android.hardware.audio.service-aidl.aoc \
@@ -3703,6 +3884,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.bcmbtlinux \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
+    android.hardware.dumpstate-service \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.gnss-service \
     android.hardware.gnss-service.pixel \
@@ -3712,6 +3894,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.pixel \
     android.hardware.neuralnetworks@service-darwinn-aidl \
     android.hardware.oemlock-service.citadel \
+    android.hardware.power.stats-service.pixel \
     android.hardware.qorvo.uwb-service \
     android.hardware.secure_element-service.uicc \
     android.hardware.security.keymint-service.citadel \
@@ -3721,6 +3904,7 @@ PRODUCT_PACKAGES += \
     citadel_updater \
     citadeld \
     com.google.edgetpu.tachyon-service \
+    disable_contaminant_detection \
     gnss_test \
     gnssd \
     google.hardware.media.c2@2.0-service \
@@ -3737,16 +3921,20 @@ PRODUCT_PACKAGES += \
     init.camera.set-interrupts-ownership \
     init.radio \
     init_uwb_calib \
+    insmod \
     liboemservice_proxy_default \
     modem_logging_control \
     modem_ml_svc_sit \
     pcie_power_control \
+    pixel-experiments-recovery \
     pixelstats-vendor \
+    predump_touch \
     rfsd \
     shamp \
     shared_modem_platform \
     sscoredump \
     storage_init \
+    touch_gti_ical \
     trusty_metricsd \
     twoshay \
     usf_stats \
