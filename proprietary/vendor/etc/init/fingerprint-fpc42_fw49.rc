@@ -2,6 +2,10 @@ service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.f
     class late_start
     user system
     group system input uhid
+    onrestart chown system system /sys/devices/platform/odm/odm:fp_fpc1020/clk_enable
+    onrestart chown system system /sys/devices/platform/odm/odm:fp_fpc1020/hw_reset
+    onrestart chown system system /sys/devices/platform/odm/odm:fp_fpc1020/irq
+    onrestart chown system system /sys/devices/platform/odm/odm:fp_fpc1020/wakeup_enable
     disabled
 
 
