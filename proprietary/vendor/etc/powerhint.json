@@ -1545,6 +1545,12 @@
       "Value": "1"
     },
     {
+      "PowerHint": "WEB_SESSIONS_CPU_LOAD_UP",
+      "Node": "TARampupMultiplier",
+      "Duration": 300,
+      "Value": "4"
+    },
+    {
       "PowerHint": "DISPLAY_INACTIVE",
       "Node": "CPULittleClusterDownRateLimitUs",
       "Duration": 0,
@@ -3366,7 +3372,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "419000"
+      "Value": "580000"
     },
     {
       "PowerHint": "THERMAL_VIRTUAL-SKIN-HINT_LIGHT",
@@ -4083,5 +4089,9 @@
       "GpuBoost": true,
       "GpuCapacityBoostMax": 25000
     }
-  ]
+  ],
+  "OtherConfigs": {
+    "EnableMetricCollection": true,
+    "MaxNumOfCachedSessionMetrics": 100
+  }
 }
